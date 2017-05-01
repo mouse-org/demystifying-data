@@ -26,3 +26,12 @@ li.item:before {
 }
 
 /* End from Vis Example */
+
+
+.touch-drag {
+  border: 1px solid black;
+  backgrounc-color: yellow;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+}
