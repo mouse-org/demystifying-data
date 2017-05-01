@@ -7,17 +7,63 @@
   </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="dragula.css">
+  <link rel="stylesheet" href="style.css" type="text/css" >
+  <!--<link rel="stylesheet" href="dragula.css">-->
+  <link href="vis.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <h1>
     Demystifying Data
   </h1>
 
-  <script src="script.js"></script>
+
+  <h2>Drag today's internet interactions onto the timeline:</h2>
+<!--
+  <p>For this to work, you will have to define your own <code>'dragstart'</code> eventListener on each item in your list of items (make sure that any new item added to the list is attached to this eventListener 'dragstart' handler). This 'dragstart' handler must set <code>dataTransfer</code> - notice you can set  the item's information as you want this way.</p>
+-->
+
+  <div id="mytimeline" ></div>
+  <div>
+    <h3>Items:</h3>
+    <ul class="items">
+      <li draggable="true" class="item">
+        Facebook
+      </li>
+      <li draggable="true" class="item">
+        Instagram
+      </li>
+      <li draggable="true" class="item">
+        Snapchat
+      </li>
+      <li draggable="true" class="item">
+        YouTube
+      </li>
+
+
+<!--
+      <li draggable="true" class="item">
+        item 1 - box
+      </li>
+      <li draggable="true" class="item">
+        item 2 - point
+      </li>
+      <li draggable="true" class="item">
+        item 3 - range
+      </li>
+      <li draggable="true" class="item">
+        item 3 - range - fixed times - <br>
+        (start: now, end: now + 10 min)
+      </li>
+-->
+    </ul>
+  </div>
+
+
+
   <script src="jquery-3.1.1.min.js"></script>
-  <script src="dragula.js"></script>
+  <script src="vis.js"></script>
+  <script src="script.js"></script>
+
 </body>
 
 </html>
