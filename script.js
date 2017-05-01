@@ -3,16 +3,18 @@
 "use strict";
 
 var todayNow = new Date();
+var count = 0;
 
 // From Vis Example:
 
 // create groups
-var numberOfGroups = 1;
+var numberOfGroups = 2;
 var groups = new vis.DataSet()
+var groupNames = ["Phone", "Laptop"]
 for (var i = 0; i < numberOfGroups; i++) {
   groups.add({
     id: i,
-    content: 'Truck&nbsp;' + i
+    content: groupNames[i]
   })
 }
 
@@ -20,24 +22,20 @@ for (var i = 0; i < numberOfGroups; i++) {
 var numberOfItems = 1;
 var items = new vis.DataSet();
 
-var itemsPerGroup = Math.round(numberOfItems/numberOfGroups);
+var start = new Date(todayNow);
 
-for (var truck = 0; truck < numberOfGroups; truck++) {
-  for (var order = 0; order < itemsPerGroup; order++) {
-    var start = new Date(todayNow);
+todayNow.setHours(todayNow.getHours() + 2);
+var end = new Date(todayNow);
 
-    todayNow.setHours(todayNow.getHours() + 2);
-    var end = new Date(todayNow);
+items.add({
+  id: count,
+  group: 1,
+  start: start,
+  end: end,
+  content: "Mouse Create"
+});
 
-    items.add({
-      id: order + itemsPerGroup * truck,
-      group: truck,
-      start: start,
-      end: end,
-      content: "Mouse Create"
-    });
-  }
-}
+count++;
 
 // specify options
 var todayStart = new Date();
