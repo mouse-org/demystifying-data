@@ -29,6 +29,7 @@ var end = new Date(todayNow);
 
 items.add({
   id: count,
+  itemsAlwaysDraggable: true,
   group: 1,
   start: start,
   end: end,
